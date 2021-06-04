@@ -6,12 +6,10 @@ project connect4 is
    for Object_Dir use "obj";
 
    package Compiler is
-      --for Default_Switches ("ada") use ("-gnatyr", "-g", "-gnata", "-gnatwa.X");
       for Default_Switches ("ada") use ("-g", "-gnatwa.X");
    end Compiler;
 
    for Languages use ("Ada");
-   --for Languages use ("Ada", "C");
    for Library_Name use "connect4";
    for Library_Kind use "dynamic";
    for Library_Interface use ("game_interface", "monte_carlo_tree_search", "connect4");

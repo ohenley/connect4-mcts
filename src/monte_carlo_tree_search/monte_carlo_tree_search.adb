@@ -3,8 +3,6 @@ with ada.containers.multiway_trees;
 with ada.containers; use ada.containers;
 with ada.numerics.discrete_random;
 
-with ada.text_io; use ada.text_io;
-
 package body monte_carlo_tree_search is
 
    subtype safe_float is float range float'range;
