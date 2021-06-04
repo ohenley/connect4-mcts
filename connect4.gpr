@@ -1,0 +1,24 @@
+project connect4 is
+   
+   for Create_Missing_Dirs use "True";
+
+   for Source_Dirs use ("src", "src/connect4", "src/monte_carlo_tree_search");
+   for Object_Dir use "obj";
+
+   package Compiler is
+      --for Default_Switches ("ada") use ("-gnatyr", "-g", "-gnata", "-gnatwa.X");
+      for Default_Switches ("ada") use ("-g", "-gnatwa.X");
+   end Compiler;
+
+   for Languages use ("Ada");
+   --for Languages use ("Ada", "C");
+   for Library_Name use "connect4";
+   for Library_Kind use "dynamic";
+   for Library_Interface use ("game_interface", "monte_carlo_tree_search", "connect4");
+   for Library_Dir use ".";
+   for Library_Ali_Dir use "lib";
+   for Library_Standalone use "encapsulated";
+   for Shared_Library_Prefix use "";
+
+end connect4;
+
